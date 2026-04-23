@@ -1,3 +1,25 @@
+<div align="center">
+
+# 🏢 Training Toolkit
+
+> 用 AI 重塑企业培训全流程
+
+[![Training Toolkit](https://img.shields.io/badge/🧩-Training_Toolkit-2D9CDB?style=flat-square)](#)
+[![RAG Engine](https://img.shields.io/badge/📚-Knowledge_Base-27AE60?style=flat-square)](#)
+[![Python](https://img.shields.io/badge/Python-3.8+-3776AB?style=flat-square&logo=python)](#)
+[![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](#)
+[![FAISS](https://img.shields.io/badge/Vector_Store-FAISS-orange?style=flat-square)](#)
+
+**企业知识库智能问答系统** — 培训不再只靠文档，让 AI 帮员工找到答案
+
+上传企业培训文档（PDF/TXT/DOCX），基于 RAG 技术构建专属知识库，员工提问即可获得精准回答 + 来源追溯。
+
+🧩 **产品矩阵** → [培训需求分析](https://github.com/ASJ-Alita/training-analyzer) · [培训效果评估](https://github.com/ASJ-Alita/kirkpatrick-eval) · [效果追踪器](https://github.com/ASJ-Alita/training-tracker) · [智能出题](https://github.com/ASJ-Alita/quiz-generator) · [培训助手](https://github.com/ASJ-Alita/training-assistant)
+
+</div>
+
+---
+
 # 📚 RAG 知识库问答系统
 
 > **Knowledge Base Q&A System — Powered by RAG**  
