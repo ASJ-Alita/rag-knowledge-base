@@ -1,0 +1,2 @@
+# Streamlit Cloud 部署配置（空文件，运行时在 Cloud Secrets 中配置）
+# 此文件确保 .streamlit 目录被 Git 追踪

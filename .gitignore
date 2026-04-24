@@ -8,3 +8,4 @@ api_config.json
 baidu_token.json
 indexes/
 documents/
+.streamlit/secrets.toml
