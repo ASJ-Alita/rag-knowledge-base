@@ -143,22 +143,28 @@ rag-knowledge-base/
 
 ## 🔬 技术架构
 
-```
-文档上传
-   ↓
-extract_text_from_file()   ← 支持 PDF/TXT/DOCX
-   ↓
-chunk_text()               ← 滑动窗口分块（400字/块，80字重叠）
-   ↓
-get_embeddings_batch()     ← BGE-M3 向量化（SiliconFlow API）
-   ↓
-VectorStore.add_chunks()    ← 存入 FAISS 索引
-   ↓
-用户提问
-   ↓
-RAGEngine.ask()            ← 检索相关块 → LLM生成回答
-   ↓
-返回回答 + 引用来源
+```mermaid
+flowchart TB
+    subgraph 知识库构建["📂 知识库构建流程"]
+        direction TB
+        A[📄 文档上传<br/>PDF / TXT / DOCX] --> B[🔤 文本提取<br/>document_processor.py]
+        B --> C[✂️ 智能分块<br/>滑动窗口 400字/块<br/>80字重叠]
+        C --> D[🔢 向量化<br/>BGE-M3 Embedding<br/>SiliconFlow API]
+        D --> E[💾 FAISS 索引<br/>vector_store.py<br/>本地持久化存储]
+    end
+
+    subgraph 智能问答["💬 智能问答流程"]
+        direction TB
+        F[❓ 用户提问] --> G[🔢 Query 向量化<br/>BGE-M3 Embedding]
+        G --> H[🔍 FAISS 语义检索<br/>Top-K 相关文档块]
+        H --> I[🤖 LLM 生成回答<br/>DeepSeek-V3<br/>带上下文 Prompt]
+        I --> J[📋 返回回答<br/>+ 引用来源追溯]
+    end
+
+    E -.->|索引查询| H
+
+    style 知识库构建 fill:#E8F5E9,stroke:#27AE60,stroke-width:2px
+    style 智能问答 fill:#E3F2FD,stroke:#2196F3,stroke-width:2px
 ```
 
 ---
