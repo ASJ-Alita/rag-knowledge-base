@@ -9,7 +9,7 @@
 [![Python](https://img.shields.io/badge/Python-3.8+-3776AB?style=flat-square&logo=python)](#)
 [![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](#)
 [![FAISS](https://img.shields.io/badge/Vector_Store-FAISS-orange?style=flat-square)](#)
-[![Deploy](https://img.shields.io/badge/Deploy-Streamlit_Cloud-red?style=flat-square&logo=streamlit)](#)
+[![Deploy](https://img.shields.io/badge/Demo-🟢_Live-success?style=flat-square)](https://rag-knowledge-base-kn27vrkxxusaz6vfr78wnv.streamlit.app/)
 
 **企业知识库智能问答系统** — 培训不再只靠文档，让 AI 帮员工找到答案
 
